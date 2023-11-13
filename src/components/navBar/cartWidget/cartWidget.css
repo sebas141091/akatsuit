@@ -1,0 +1,27 @@
+
+.contenedor__icono{
+    position: absolute;
+    right: 1em;
+    top: 1.778em;
+    
+}
+.icono{
+    position: relative;
+}
+.icono__dibujo{
+    font-size: 2.7em;
+}
+
+.icono__burbuja{
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: red;
+    color: aliceblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: .2em;
+    right: -.4em;
+}
