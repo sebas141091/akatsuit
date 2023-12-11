@@ -2,5 +2,20 @@
   margin: 0px;
   box-sizing: border-box;
   list-style: none;
-  
+
+}
+
+.boton__p{
+  display: flex;
+  justify-content: center;
+  color:aliceblue;
+}
+.boton__Detalle{
+  margin-top: 1em;
+  background-color : #b42323;
+  width: 7em;
+  border-radius: .5em;
+  border-color: black solid;
+  border-style: solid;
+
 }

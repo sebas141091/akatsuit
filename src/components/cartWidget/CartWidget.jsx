@@ -1,8 +1,7 @@
 import {AiOutlineShopping} from "react-icons/ai";
 
 import './cartWidget.css';
-export const CartWidget=()=>{
-
+export const CartWidget=({cant})=>{
     return(
         <div className='contenedor__icono'>
                     <div className='icono'>

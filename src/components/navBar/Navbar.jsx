@@ -1,26 +1,21 @@
 import './NavBar.css';
-import { CartWidget } from './cartWidget/CartWidget';
+import { CartWidget } from '../cartWidget/CartWidget';
 import { GiScythe } from "react-icons/gi";
-//import {AiOutlineShopping} from "react-icons/ai";
-
-export const NavBar = ({img,opcion,opcion2,opcion3,opcion4}) =>{
+import { Link, NavLink } from 'react-router-dom';
+export const NavBar = ({img}) =>{
     return (
-        <header>
             <nav className='navBar'>
-                <div className='contenedor__logo'>
+                <Link to = '/' className='contenedor__logo'>
                     <img className='logo' src={img} alt="" srcset="" />
-                </div>
-                <div className='contenedor__opciones'>
-                    <ul className='opciones__seccion'>
-                        <li className='seccion__destacado'><a href="#ref" className='link__destacado'><div className='menus'><GiScythe className='icono__aka'/>{opcion}</div></a></li>
-                        <li className='seccion__hombre'><a href="#ref" className='link__hombre'><div className='menus'><GiScythe className='icono__aka'/>{opcion2}</div></a></li>
-                        <li className='seccion__mujer'><a href="#ref" className='link__mujer'><div className='menus'><GiScythe className='icono__aka'/>{opcion3}</div></a></li>
-                        <li className='seccion__ninio'><a href="#ref" className='link__niño'><div className='menus'><GiScythe className='icono__aka'/>{opcion4}</div></a></li>
-                    </ul>
+                </Link>
+                <div className='opciones__seccion'>
+                    <NavLink to = '/category/accesorio' className={'menus'}><GiScythe className='icono__aka'/>Accesorio</NavLink>
+                    <NavLink to = '/category/indumentaria' className={'menus'}><GiScythe className='icono__aka'/>indumentaria</NavLink>                
+                    <NavLink to = '/category/manga' className={'menus'}><GiScythe className='icono__aka'/>Manga</NavLink>
+                    
                 </div>
                 <CartWidget/> 
             </nav>
             
-        </header>
             )
 }

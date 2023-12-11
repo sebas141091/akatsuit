@@ -1,0 +1,29 @@
+.contenedor__contador{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor__boton{
+    display: flex;
+    
+}
+.signos{
+    font-size: 1.5em;
+}
+.boton__signos{
+    height: 3em;
+}
+.num_Carrito{
+    font-size: 3em;
+    margin-left: 1em;
+    margin-right:1em;
+}
+.boton__agregar__p{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+.boton__agre{
+    width: 22em;
+}

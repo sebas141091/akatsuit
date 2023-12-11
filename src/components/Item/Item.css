@@ -1,0 +1,20 @@
+
+
+.card{
+    width: 18rem;
+    margin-bottom: 2em;
+}
+.titulo__producto{
+    
+    color: #b42323;
+    font-weight: bold;
+    font-size: 2em;
+
+}
+.img{
+    height: 16em;
+}
+.contenedor__img , .contenedor__titulo , .botonDetalle__producto{
+    display: flex;
+    justify-content: center;
+}
