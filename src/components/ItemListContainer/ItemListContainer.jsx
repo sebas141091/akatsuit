@@ -3,13 +3,16 @@ import { useState,useEffect } from 'react'
 import { getListaProductos,getProductByCategory } from '../../asyncMock';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+/*importamos lo de firebase*/
+ import { collection,getDocs, query,where } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 export const ItemListContainer=({greeting})=>{
     const [productos,setProductos] = useState([]);
     const {categoryId} = useParams();
 
     useEffect(()=>{
-        const asyncFunc = categoryId? getProductByCategory : getListaProductos
+        /*const asyncFunc = categoryId? getProductByCategory : getListaProductos
         
         asyncFunc(categoryId)
         .then(response=>{
@@ -18,6 +21,22 @@ export const ItemListContainer=({greeting})=>{
         .catch(error=>{
             console.log(error)
         })
+*/
+
+
+        const productosRef=collection(db,"productos");
+
+        const q =categoryId?query(productosRef, where ("category","==",categoryId)):productosRef
+        getDocs(q)
+            .then((resp)=> {
+                setProductos(
+
+                resp.docs.map((doc)=>{
+                    return {...doc.data(), id:doc.id}
+                }))
+            })
+
+
     },[categoryId])
     
     return(
