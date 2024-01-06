@@ -6,7 +6,7 @@ export const NavBar = ({img}) =>{
     return (
             <nav className='navBar'>
                 <Link to = '/' className='contenedor__logo'>
-                    <img className='logo' src={img} alt="" srcset="" />
+                    <img className='logo' src={img} alt="" srcSet="" />
                 </Link>
                 <div className='opciones__seccion'>
                     <NavLink to = '/category/accesorio' className={'menus'}><GiScythe className='icono__aka'/>Accesorio</NavLink>

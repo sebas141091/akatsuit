@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import "./Item.css"
 
 const Item = ({id,name,img,price,stock})=>{
-    
+  
     return(
     <div className="col-sm-6 col-md-6 col-lg-4">    
         
@@ -19,7 +19,7 @@ const Item = ({id,name,img,price,stock})=>{
                 <p className="card-text">Precio: {price}</p>
                 <p className="card-text">Stock Disponible: {stock}</p>
                 <footer className="botonDetalle__producto">
-                    <Link to={`/item/${id}`} className="boton__Detalle"><p className="boton__p">Ver detalle</p></Link>
+                    <Link to={`/item/${id}`} className="boton__Detalle"><p className="boton__p" onClick={()=>{console.log({id})}}>Ver detalle</p></Link>
                 </footer>
             </div>
             
