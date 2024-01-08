@@ -14,7 +14,9 @@ export const NavBar = ({img}) =>{
                     <NavLink to = '/category/manga' className={'menus'}><GiScythe className='icono__aka'/>Manga</NavLink>
                     
                 </div>
-                <CartWidget/> 
+                    <CartWidget/> 
+                
+
             </nav>
             
             )

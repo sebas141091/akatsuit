@@ -1,6 +1,6 @@
 
 import "./ItemCount.css"
-function ItemCount({cant,decremento,incremento}){
+function ItemCount({cant,decremento,incremento,agregarAlCarrito}){
 
  
     return(
@@ -11,7 +11,7 @@ function ItemCount({cant,decremento,incremento}){
                 <button className="boton__Detalle boton__signos" onClick={incremento}><p className="boton__p signos">+</p></button>
             </div>
             <div className="contendor__agregar">
-                <button className="boton__Detalle boton__agre"  >
+                <button className="boton__Detalle boton__agre"  onClick={agregarAlCarrito}>
                     <p className="boton__p boton__agregar__p">Agregar al carrito</p>
                 </button>
             </div>

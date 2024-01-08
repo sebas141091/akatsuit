@@ -7,21 +7,23 @@
 }
 .icono{
     position: relative;
+    top:-.7em;
+
 }
 .icono__dibujo{
-    font-size: 2.7em;
+    font-size: 3.1em;
 }
 
 .icono__burbuja{
     position: absolute;
-    width: 1.5em;
-    height: 1.5em;
+    width: 2em;
+    height: 2em;
     background-color: red;
     color: aliceblue;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: .2em;
-    right: -.4em;
+    top:.59em;
+    right: -1em;
 }
