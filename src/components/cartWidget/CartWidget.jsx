@@ -1,7 +1,7 @@
 import {AiOutlineShopping} from "react-icons/ai";
 import './cartWidget.css';
 import { useContext } from "react";
-import { CartContext, CartProvider } from "../../context/CartContext";
+import { CartContext, CartProvider } from "../../Context/CartContext";
 import { NavLink } from "react-router-dom";
 export const CartWidget=({cant})=>{
     const {cantidadCarrito}=useContext(CartContext);

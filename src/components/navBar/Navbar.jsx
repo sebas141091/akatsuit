@@ -1,8 +1,9 @@
 import './NavBar.css';
-import { CartWidget } from '../cartWidget/CartWidget';
+import { CartWidget } from '../CartWidget/CartWidget';
 import { GiScythe } from "react-icons/gi";
 import { Link, NavLink } from 'react-router-dom';
-export const NavBar = ({img}) =>{
+
+const NavBar = ({img}) =>{
     return (
             <nav className='navBar'>
                 <Link to = '/' className='contenedor__logo'>
@@ -12,7 +13,6 @@ export const NavBar = ({img}) =>{
                     <NavLink to = '/category/accesorio' className={'menus'}><GiScythe className='icono__aka'/>Accesorio</NavLink>
                     <NavLink to = '/category/indumentaria' className={'menus'}><GiScythe className='icono__aka'/>indumentaria</NavLink>                
                     <NavLink to = '/category/manga' className={'menus'}><GiScythe className='icono__aka'/>Manga</NavLink>
-                    
                 </div>
                     <CartWidget/> 
                 
@@ -21,3 +21,5 @@ export const NavBar = ({img}) =>{
             
             )
 }
+
+export default NavBar;

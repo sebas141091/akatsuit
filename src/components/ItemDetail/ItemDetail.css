@@ -3,3 +3,10 @@
     justify-content: center;
 }
 
+.contenedor__detalle__prod{
+    display: flex;
+    justify-content: center;
+}
+.detalle{
+    align-self: center;
+}

@@ -1,0 +1,57 @@
+
+.titulo{
+    color:#363636;
+}
+
+.img__carrito{
+    width: 10em;
+    height: 10em;
+}
+
+.contenedor__datos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+.contenedor__vaciar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.icono__carrito{
+    font-size: 1.7em;
+    color: #fff;
+}
+
+.contenedor__total{
+    display: flex;
+    align-items : center;
+    flex-direction: column;
+}
+.contenedor__icono__delete{
+    align-self: flex-start;
+    
+}
+
+
+.icono__delete{
+    color: #b42323;
+ 
+}
+.botton__delete{
+    background-color: #fff;
+    border-color: #fff;
+    transition: .1s;
+}
+.botton__delete :hover{
+    background: rgb(190, 190, 190);
+
+}
+
+.datos__producto__total{
+    font-size: 3em;
+    font-weight: bold;
+}

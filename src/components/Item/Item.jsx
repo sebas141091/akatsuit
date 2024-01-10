@@ -16,10 +16,10 @@ const Item = ({id,name,img,price,stock})=>{
                 <img className="card-img-top img" src={img} alt={name} />
             </div>
             <div className="card-body">
-                <p className="card-text">Precio: {price}</p>
-                <p className="card-text">Stock Disponible: {stock}</p>
+                <p className="card-text datos__producto ">Precio: ${price}</p>
+                <p className="card-text datos__producto">Stock Disponible: {stock}</p>
                 <footer className="botonDetalle__producto">
-                    <Link to={`/item/${id}`} className="boton__Detalle"><p className="boton__p" onClick={()=>{console.log({id})}}>Ver detalle</p></Link>
+                    <Link to={`/item/${id}`} className=" boton__general"><p className="boton__p">Ver detalle</p></Link>
                 </footer>
             </div>
             

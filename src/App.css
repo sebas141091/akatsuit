@@ -10,12 +10,24 @@
   justify-content: center;
   color:aliceblue;
 }
-.boton__Detalle{
+
+.datos__producto{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.boton__general{
   margin-top: 1em;
   background-color : #b42323;
   width: 7em;
   border-radius: .5em;
   border-color: black solid;
   border-style: solid;
-
+  font-size: -.9em;
+}
+.titulo{
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: bold;
+  color: black;
 }

@@ -1,16 +1,14 @@
 import './ItemListContainer.css'
 import { useState,useEffect } from 'react'
-//import { getListaProductos,getProductByCategory } from '../../asyncMock';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-/*importamos lo de firebase*/
  import { collection,getDocs, query,where } from 'firebase/firestore';
-import { db } from '../../firebase/config';
+import { db } from '../../FirebaseConf/config';
 
-export const ItemListContainer=({greeting})=>{
+ const ItemListContainer=({greeting})=>{
     const [productos,setProductos] = useState([]);
     const {categoryId} = useParams();
-
+   
     useEffect(()=>{
         const productosRef=collection(db,"productos");
 
@@ -26,14 +24,18 @@ export const ItemListContainer=({greeting})=>{
 
     },[categoryId])
 
-
+    const mostrarTitulo =()=>{
+        const a = greeting==="" ? categoryId:"bienvenidos a akatsuit" 
+        return a;
+    }
     return(
         <div>
-            <h1 className="title is-1 is-spaced">{greeting}</h1>
-            
+            <h1 className="title is-1 is-spaced">{mostrarTitulo()}</h1>
             <div className='container text-center '>
                 <ItemList products={productos}/>
             </div>
         </div>
     )
 }
+
+export default ItemListContainer;
